@@ -1,0 +1,32 @@
+body{
+    width: 100%;
+}
+
+#wrapper{
+    overflow-x: hidden;
+    background-image: linear-gradient(
+        to right,
+        #baf3d7,
+        #c2f5de,
+        #cbf7e4,
+        #daf8ea,
+        #ddfaef     
+    );
+}
+
+#sidebar-wrapper{
+    min-height: 100vh;
+    min-width: 20vw;
+}
+
+.sidebar-form .form-group{
+    margin-bottom: 1rem;
+}
+
+.sidebar-form .form-group label{
+    font-weight: bold;
+}
+
+.page-content-wrapper{
+    min-width: 80vw;
+}
