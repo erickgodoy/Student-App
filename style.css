@@ -6,11 +6,11 @@ body{
     overflow-x: hidden;
     background-image: linear-gradient(
         to right,
-        #baf3d7,
-        #c2f5de,
-        #cbf7e4,
-        #daf8ea,
-        #ddfaef     
+        #f3dcba,
+        #f5e3c2,
+        #f7e8cb,
+        #f8efda,
+        #faf2dd   
     );
 }
 

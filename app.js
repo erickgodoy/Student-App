@@ -19,7 +19,7 @@ class UI{
         <td>${student.city}</td>
         <td>${student.phone}</td>
         <td>${student.gender}</td>
-        <td><button class="btn" name="delete"><i class="fa-solid fa-trash"></i></button></td>
+        <td><a class="btn" name="delete"><i class=" fa-solid fa-trash" name="icontrash"></i></button></td>
         `;
         table.appendChild(element);
     }
@@ -28,8 +28,13 @@ class UI{
         document.getElementById('student-form').reset();
     }
 
-    deleteStudent(){
-
+    deleteStudent(element){
+        if(element.name === 'delete'){
+            element.parentElement.parentElement.remove();
+        }
+        if(element.tagName === 'I'){
+            element.parentElement.parentElement.parentElement.remove();
+        }
     }
 
     showMessage(){
@@ -51,4 +56,9 @@ document.getElementById('student-form').addEventListener('submit', function(e){
     ui.resetForm();
     //cancel refresh
     e.preventDefault();
+});
+
+document.getElementById('tablecontent').addEventListener('click',function(e){
+    const ui = new UI();
+    ui.deleteStudent(e.target);
 });
